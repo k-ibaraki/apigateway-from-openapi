@@ -1,0 +1,28 @@
+{
+  "name": "api_gatewayfrom_open_api",
+  "version": "0.1.0",
+  "bin": {
+    "api_gatewayfrom_open_api": "bin/api_gatewayfrom_open_api.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "cdk": "cdk"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.136",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "20.11.19",
+    "aws-cdk": "2.133.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.3.3"
+  },
+  "dependencies": {
+    "@codegenie/serverless-express": "^4.14.0",
+    "aws-cdk-lib": "2.133.0",
+    "constructs": "^10.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.1"
+  }
+}
