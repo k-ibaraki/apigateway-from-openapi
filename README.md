@@ -13,10 +13,10 @@ npm run build
 
 ## deploy
 ```
-npx cdk deploy apiGatewayStack --profile {profile}
+npx cdk deploy --profile {profile}
 ```
 
 ## destroy
 ```
-npx cdk destroy lambdaApiStack --profile {profile}
+npx cdk destroy --profile {profile}
 ```
