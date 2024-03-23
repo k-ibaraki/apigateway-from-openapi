@@ -21,6 +21,7 @@
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
     "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
     "typeRoots": [
       "./node_modules/@types"
     ]

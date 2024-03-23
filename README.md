@@ -8,15 +8,15 @@ npm i
 
 ## build
 ```
-npm build
+npm run build
 ```
 
 ## deploy
 ```
-npx cdk deploy --profile {profile}
+npx cdk deploy apiGatewayStack --profile {profile}
 ```
 
 ## destroy
 ```
-npx cdk destroy --profile {profile}
+npx cdk destroy lambdaApiStack --profile {profile}
 ```
