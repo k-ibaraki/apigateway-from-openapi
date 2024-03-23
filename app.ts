@@ -39,7 +39,8 @@ const createLambda = (lambdaApiStack: cdk.Stack): void => {
 
 const createAPIGateway = (apiGatewayStack: cdk.Stack): void => {
   // API定義ファイルの読み込み
-  const apiPath = path.join(__dirname, `api-doc/api.yaml`);
+  //const apiPath = path.join(__dirname, `api-doc/api.old.yaml`);
+  const apiPath = path.join(__dirname, `api-doc/api.new.yaml`);
   const yamlFile = fs.readFileSync(apiPath).toString();
 
   // Lambda関数のURLを取得

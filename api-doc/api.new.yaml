@@ -1,0 +1,42 @@
+openapi: '3.0.2'
+info:
+  title: API Title
+  version: '1.0'
+servers:
+  - url: https://localhost:8080
+    description: Local server
+paths:
+  /query:
+    get:
+      parameters:
+        - name: id
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+      x-amazon-apigateway-integration:
+        httpMethod: "GET"
+        type: "http_proxy"
+        uri: "{TARGET_URL}query/"
+        passthroughBehavior: "when_no_match"
+  /path/{id}:
+    get:
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+      x-amazon-apigateway-integration:
+        httpMethod: "GET"
+        type: "http_proxy"
+        uri: "{TARGET_URL}path/{id}"
+        passthroughBehavior: "when_no_match"
+        requestParameters:
+          integration.request.path.id: "method.request.path.id"
