@@ -49,7 +49,6 @@ const createAPIGateway = (apiGatewayStack: cdk.Stack): void => {
     /\{TARGET_URL\}/g,
     url,
   );
-  console.log(replacedYaml);
   const openApiDefinition = yaml.parse(replacedYaml);
 
   // API Gatewayを作成
